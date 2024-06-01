@@ -1,5 +1,5 @@
 
-export default function UserInput({handleChange,UserInput}){
+export default function UserInput({onChange,UserInput}){
    
     
     return <section id="user-input">
@@ -8,13 +8,13 @@ export default function UserInput({handleChange,UserInput}){
                 <label>Initial Investment</label>
                 <input type="number" required
                 value={UserInput.initialInvestment}
-                 onChange={(event)=>handleChange('initialInvestment',event.target.value)}/>
+                 onChange={(event)=>onChange('initialInvestment',event.target.value)}/>
             </p>
             <p>
                 <label>Annual Investment</label>
                 <input type="number" 
                 value={UserInput.annualInvestment}
-                onChange={(event)=>handleChange('annualInvestment',event.target.value)}
+                onChange={(event)=>onChange('annualInvestment',event.target.value)}
                 required/>
             </p>
         </div>
@@ -23,13 +23,13 @@ export default function UserInput({handleChange,UserInput}){
                 <label>Expected Return</label>
                 <input type="number" 
                 value={UserInput.expectedReturn}
-                onChange={(event)=>handleChange('expectedReturn',event.target.value)}required/>
+                onChange={(event)=>onChange('expectedReturn',event.target.value)}required/>
             </p>
             <p>
                 <label>Duration</label>
                 <input type="number"
                 value={UserInput.duration}
-                onChange={(event)=>handleChange('duration',event.target.value)}
+                onChange={(event)=>onChange('duration',event.target.value)}
                 required/>
             </p>
         </div>
